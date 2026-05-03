@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ziv Peltz — Software Developer</title>
+  <meta name="description" content="Portfolio of Ziv Peltz — CS student and software developer specializing in systems programming, mobile development, and AI-powered applications." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Animated background canvas -->
+  <canvas id="bg-canvas"></canvas>
+
+  <!-- Navigation -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo">ZP<span class="dot">.</span></a>
+      <ul class="nav-links">
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+      <a href="https://github.com/zivpeltz" target="_blank" class="nav-cta">GitHub ↗</a>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="hero">
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="badge-dot"></span>
+        Available for opportunities
+      </div>
+      <h1 class="hero-title">
+        <span class="title-line">Hi, I'm</span>
+        <span class="title-name">Ziv Peltz</span>
+      </h1>
+      <p class="hero-subtitle">
+        CS Student &amp; Software Developer building
+        <span class="highlight-cycle" id="highlight-cycle">systems software</span>
+      </p>
+      <p class="hero-desc">
+        I build Linux system tools, explore OS internals, and work on a Game Boy emulator in C on my spare time. Passionate about how computers work at the metal level.
+      </p>
+      <div class="hero-actions">
+        <a href="#projects" class="btn-primary" id="view-work-btn">View My Work</a>
+        <a href="https://www.linkedin.com/in/ziv-peltz/" target="_blank" class="btn-ghost">LinkedIn ↗</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat">
+          <span class="stat-num" data-target="8">0</span>
+          <span class="stat-label">Repositories</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-num" data-target="5">0</span>
+          <span class="stat-label">Languages</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-num" data-target="3">0</span>
+          <span class="stat-label">Years Coding</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="gb-shell">
+        <div class="gb-screen-bezel">
+          <div class="gb-power-led"></div>
+          <div class="gb-label">GAME BOY ◈ COLOR</div>
+          <div class="code-window">
+            <div class="window-bar">
+              <span class="win-dot red"></span>
+              <span class="win-dot yellow"></span>
+              <span class="win-dot green"></span>
+              <span class="win-filename">ziv.py</span>
+            </div>
+            <pre class="code-content"><code><span class="kw">class</span> <span class="cls">ZivPeltz</span>:
+  <span class="kw">def</span> <span class="fn">__init__</span>(self):
+    self.name  = <span class="str">"Ziv Peltz"</span>
+    self.edu   = <span class="str">"BSc CS @ TAU"</span>
+    self.skills = [
+      <span class="str">"Python"</span>, <span class="str">"C"</span>,
+      <span class="str">"Java"</span>, <span class="str">"C#"</span>
+    ]
+    self.wip = <span class="str">"GB Emulator"</span>
+
+  <span class="kw">def</span> <span class="fn">passion</span>(self):
+    <span class="kw">return</span> [
+      <span class="str">"Linux"</span>,
+      <span class="str">"OS Internals"</span>,
+      <span class="str">"Low-Level C"</span>
+    ]
+
+<span class="cmt"># INSERT COIN TO CONTINUE</span>
+</code></pre>
+          </div>
+        </div>
+        <div class="gb-controls">
+          <div class="gb-dpad">
+            <div style="grid-column:2;grid-row:1" class="gb-dpad-btn"></div>
+            <div style="grid-column:1;grid-row:2" class="gb-dpad-btn"></div>
+            <div style="grid-column:2;grid-row:2" class="gb-dpad-btn gb-dpad-center"></div>
+            <div style="grid-column:3;grid-row:2" class="gb-dpad-btn"></div>
+            <div style="grid-column:2;grid-row:3" class="gb-dpad-btn"></div>
+          </div>
+          <div class="gb-ab">
+            <div class="gb-btn">B</div>
+            <div class="gb-btn">A</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-hint">
+      <span>scroll</span>
+      <div class="scroll-arrow"></div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about">
+    <div class="section-inner">
+      <div class="section-label">// about me</div>
+      <h2 class="section-title">Who I Am</h2>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>
+            I'm a Computer Science student at <strong>Tel Aviv University</strong> (BSc, minor in Entrepreneurship) with a deep fascination for how computers work at the lowest levels. My coursework spans data structures, computer architecture, and software design — all with strong grades.
+          </p>
+          <p>
+            Before university I served <strong>3 years in the IDF</strong> as a Combat Soldier and Operations Sergeant at the 162 Division fire center during the Swords of Steel war. That experience gave me discipline, leadership under pressure, and the ability to perform in high-stakes environments.
+          </p>
+          <p>
+            My ambition is to work close to the metal: Linux kernel development, OS internals, and systems tools. In my spare time I'm working on a Game Boy emulator in C — engineering the CPU fetch-decode-execute cycle to deeply understand hardware-software interfacing at the lowest level.
+          </p>
+          <div class="about-chips">
+            <span class="chip">🎓 TAU — CS + Entrepreneurship</span>
+            <span class="chip">🪖 IDF Veteran</span>
+            <span class="chip">🐧 Linux Enthusiast</span>
+            <span class="chip">⚙️ Systems Programmer</span>
+          </div>
+        </div>
+        <div class="about-card-stack">
+          <div class="about-card card-1">
+            <div class="about-card-icon">🐧</div>
+            <h3>Linux & OS Internals</h3>
+            <p>Fascinated by kernels, system calls, scheduling, and memory management</p>
+          </div>
+          <div class="about-card card-2">
+            <div class="about-card-icon">⚙️</div>
+            <h3>Systems Programming</h3>
+            <p>Writing tight, efficient C — emulators, data structures, bare-metal logic</p>
+          </div>
+          <div class="about-card card-3">
+            <div class="about-card-icon">📱</div>
+            <h3>Mobile Dev</h3>
+            <p>Full-stack Android apps with real-time data and polished native UIs</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills">
+    <div class="section-inner">
+      <div class="section-label">// technical skills</div>
+      <h2 class="section-title">What I Work With</h2>
+      <div class="skills-grid">
+
+        <div class="skill-category">
+          <h3 class="skill-cat-title">Languages</h3>
+          <div class="skill-bars">
+            <div class="skill-bar-item">
+              <div class="skill-bar-header"><span>Python</span><span class="skill-pct">90%</span></div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" data-width="90" style="--c:#a78bfa"></div></div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-bar-header"><span>C</span><span class="skill-pct">85%</span></div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" data-width="85" style="--c:#60a5fa"></div></div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-bar-header"><span>Java</span><span class="skill-pct">75%</span></div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" data-width="75" style="--c:#fb923c"></div></div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-bar-header"><span>C#</span><span class="skill-pct">65%</span></div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" data-width="65" style="--c:#f472b6"></div></div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-bar-header"><span>MIPS Assembly</span><span class="skill-pct">60%</span></div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" data-width="60" style="--c:#34d399"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <h3 class="skill-cat-title">Domains</h3>
+          <div class="skill-tags">
+            <span class="skill-tag tag-purple">Systems Programming</span>
+            <span class="skill-tag tag-blue">Linux Kernel</span>
+            <span class="skill-tag tag-pink">OS Internals</span>
+            <span class="skill-tag tag-orange">Data Structures & Algorithms</span>
+            <span class="skill-tag tag-green">Android Development</span>
+            <span class="skill-tag tag-purple">CPU Architecture</span>
+            <span class="skill-tag tag-blue">Memory Management</span>
+            <span class="skill-tag tag-pink">Device Drivers</span>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <h3 class="skill-cat-title">Tools & Frameworks</h3>
+          <div class="tool-grid">
+            <div class="tool-item"><span class="tool-icon">🐧</span><span>Linux</span></div>
+            <div class="tool-item"><span class="tool-icon">🗃️</span><span>Git / GitHub</span></div>
+            <div class="tool-item"><span class="tool-icon">🐳</span><span>Docker</span></div>
+            <div class="tool-item"><span class="tool-icon">🐍</span><span>NumPy / sklearn</span></div>
+            <div class="tool-item"><span class="tool-icon">🤖</span><span>LLM APIs</span></div>
+            <div class="tool-item"><span class="tool-icon">⚡</span><span>CPython API</span></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects">
+    <div class="section-inner">
+      <div class="section-label">// featured projects</div>
+      <h2 class="section-title">Things I've Built</h2>
+      <div class="projects-grid">
+
+        <!-- Gameboy Emulator - Featured -->
+        <div class="project-card featured" id="proj-gameboy-feat">
+          <div class="project-glow"></div>
+          <div class="project-header">
+            <div class="project-icon">🎮</div>
+            <div class="project-badges">
+              <span class="badge-featured">Featured</span>
+            </div>
+          </div>
+          <h3 class="project-title">Game Boy Emulator <span class="project-sub">/ WIP Side Project</span></h3>
+          <p class="project-desc">
+            Working on a hand-crafted Game Boy emulator in C on my spare time — implementing the Sharp LR35902 CPU with instruction decoding, the fetch-decode-execute cycle, memory-mapped I/O, and cycle-accurate timing. A deep personal dive into hardware-software interfacing from the ground up.
+          </p>
+          <div class="project-tech">
+            <span class="tech-tag">C</span>
+            <span class="tech-tag">CPU Emulation</span>
+            <span class="tech-tag">Memory Management</span>
+            <span class="tech-tag">Hardware I/O</span>
+            <span class="tech-tag">Systems Programming</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/zivpeltz/Gameboy-emulator" target="_blank" class="project-link">View on GitHub ↗</a>
+          </div>
+        </div>
+
+        <!-- Neviim -->
+        <div class="project-card" id="proj-neviim">
+          <div class="project-glow"></div>
+          <div class="project-header">
+            <div class="project-icon">🤖</div>
+            <div class="project-badges">
+              <span class="badge-stars">⭐ 2</span>
+            </div>
+          </div>
+          <h3 class="project-title">Neviim</h3>
+          <p class="project-desc">
+            A fully functional prediction market Android app built end-to-end through LLM-assisted development. Demonstrates my ability to scope, architect, and ship complex software products by leveraging AI collaboration effectively — from backend design to native UI.
+          </p>
+          <div class="project-tech">
+            <span class="tech-tag">LLM-Assisted Dev</span>
+            <span class="tech-tag">Android</span>
+            <span class="tech-tag">Firebase</span>
+            <span class="tech-tag">REST API</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/zivpeltz/Neviim" target="_blank" class="project-link">View on GitHub ↗</a>
+          </div>
+        </div>
+
+        <!-- Linux Ambition Card -->
+        <div class="project-card" id="proj-linux">
+          <div class="project-glow"></div>
+          <div class="project-header">
+            <div class="project-icon">🐧</div>
+            <div class="project-badges"><span class="badge-wip">In Progress</span></div>
+          </div>
+          <h3 class="project-title">Linux Systems Work</h3>
+          <p class="project-desc">
+            Exploring Linux kernel internals: system calls, process scheduling, virtual memory, and device drivers. Actively learning the kernel source and building small system-level tools and modules in C.
+          </p>
+          <div class="project-tech">
+            <span class="tech-tag">C</span>
+            <span class="tech-tag">Linux Kernel</span>
+            <span class="tech-tag">System Calls</span>
+            <span class="tech-tag">Drivers</span>
+          </div>
+          <div class="project-links">
+            <span class="project-link-disabled">Ongoing exploration</span>
+          </div>
+        </div>
+
+        <!-- Software Project (C) -->
+        <div class="project-card" id="proj-swproj">
+          <div class="project-glow"></div>
+          <div class="project-header">
+            <div class="project-icon">🛠️</div>
+          </div>
+          <h3 class="project-title">Software Project — C</h3>
+          <p class="project-desc">
+            A multi-part university project series implementing complex algorithms and data structures entirely in C. Focused on manual memory management, performance optimization, and writing production-quality systems code.
+          </p>
+          <div class="project-tech">
+            <span class="tech-tag">C</span>
+            <span class="tech-tag">Algorithms</span>
+            <span class="tech-tag">Memory Management</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/zivpeltz/SoftwareProject-ExerciseOne" target="_blank" class="project-link">Ex1 ↗</a>
+            <a href="https://github.com/zivpeltz/SoftwareProject-ExerciseTwo" target="_blank" class="project-link">Ex2 ↗</a>
+          </div>
+        </div>
+
+        <!-- SymNMF Final Project -->
+        <div class="project-card" id="proj-symnmf">
+          <div class="project-glow"></div>
+          <div class="project-header">
+            <div class="project-icon">📊</div>
+          </div>
+          <h3 class="project-title">SymNMF Clustering</h3>
+          <p class="project-desc">
+            High-performance graph clustering via Symmetric NMF. Engineered a custom C extension using the CPython API to accelerate heavy matrix operations, with strict manual memory management and accuracy evaluation against K-means.
+          </p>
+          <div class="project-tech">
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">C</span>
+            <span class="tech-tag">CPython API</span>
+            <span class="tech-tag">sklearn</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/zivpeltz/final-project" target="_blank" class="project-link">View on GitHub ↗</a>
+          </div>
+        </div>
+
+        <!-- Audio Genre Classification -->
+        <div class="project-card" id="proj-audio-nn">
+          <div class="project-glow"></div>
+          <div class="project-header">
+            <div class="project-icon">🎵</div>
+          </div>
+          <h3 class="project-title">Audio Genre Classifier</h3>
+          <p class="project-desc">
+            Designed and trained a neural network to classify music genres from raw audio. Built a data pipeline converting audio signals into visual frequency maps (spectrograms), leveraging image-based pattern recognition for genre prediction.
+          </p>
+          <div class="project-tech">
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">Neural Network</span>
+            <span class="tech-tag">Signal Processing</span>
+            <span class="tech-tag">sklearn</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/zivpeltz" target="_blank" class="project-link">View on GitHub ↗</a>
+          </div>
+        </div>
+
+        <!-- Data Structures -->
+        <div class="project-card" id="proj-ds">
+          <div class="project-glow"></div>
+          <div class="project-header">
+            <div class="project-icon">🌳</div>
+          </div>
+          <h3 class="project-title">Data Structures Suite</h3>
+          <p class="project-desc">
+            Two-part series implementing advanced data structures including AVL trees, heaps, and graph algorithms. Built in Java and Python with a focus on algorithmic correctness and performance analysis.
+          </p>
+          <div class="project-tech">
+            <span class="tech-tag">Java</span>
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">Algorithms</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/zivpeltz/DataStructures1" target="_blank" class="project-link">DS1 ↗</a>
+            <a href="https://github.com/zivpeltz/DataStructures2" target="_blank" class="project-link">DS2 ↗</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <div class="section-inner">
+      <div class="section-label">// get in touch</div>
+      <h2 class="section-title">Let's Connect</h2>
+      <p class="contact-sub">I'm actively looking for opportunities. Whether you have a job offer, a cool project, or just want to chat — my inbox is open.</p>
+      <div class="contact-cards">
+        <a href="mailto:zivpeltz@gmail.com" class="contact-card" id="contact-email">
+          <div class="contact-icon">✉️</div>
+          <div class="contact-info">
+            <span class="contact-label">Email</span>
+            <span class="contact-value">zivpeltz@gmail.com</span>
+          </div>
+          <div class="contact-arrow">↗</div>
+        </a>
+        <a href="https://www.linkedin.com/in/ziv-peltz/" target="_blank" class="contact-card" id="contact-linkedin">
+          <div class="contact-icon">💼</div>
+          <div class="contact-info">
+            <span class="contact-label">LinkedIn</span>
+            <span class="contact-value">linkedin.com/in/ziv-peltz</span>
+          </div>
+          <div class="contact-arrow">↗</div>
+        </a>
+        <a href="https://github.com/zivpeltz" target="_blank" class="contact-card" id="contact-github">
+          <div class="contact-icon">🐙</div>
+          <div class="contact-info">
+            <span class="contact-label">GitHub</span>
+            <span class="contact-value">github.com/zivpeltz</span>
+          </div>
+          <div class="contact-arrow">↗</div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="footer">
+    <div class="footer-inner">
+      <span class="footer-logo">ZP<span class="dot">.</span></span>
+      <span class="footer-copy">Designed &amp; built by Ziv Peltz © 2026</span>
+      <div class="footer-links">
+        <a href="https://github.com/zivpeltz" target="_blank">GitHub</a>
+        <a href="https://www.linkedin.com/in/ziv-peltz/" target="_blank">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
