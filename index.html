@@ -26,8 +26,19 @@
         <li><a href="#contact" class="nav-link">Contact</a></li>
       </ul>
       <a href="https://github.com/zivpeltz" target="_blank" class="nav-cta">GitHub ↗</a>
+      <button class="nav-hamburger" id="nav-hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
     </div>
   </nav>
+  <!-- Mobile nav drawer -->
+  <div class="nav-drawer" id="nav-drawer" role="dialog" aria-label="Navigation menu">
+    <a href="#about"   class="nav-link" id="mob-about">About</a>
+    <a href="#skills"  class="nav-link" id="mob-skills">Skills</a>
+    <a href="#projects" class="nav-link" id="mob-projects">Projects</a>
+    <a href="#contact" class="nav-link" id="mob-contact">Contact</a>
+    <a href="https://github.com/zivpeltz" target="_blank" class="nav-cta" id="mob-github">GitHub ↗</a>
+  </div>
 
   <!-- Hero Section -->
   <section id="hero">
@@ -126,7 +137,7 @@
   <section id="about">
     <div class="section-inner">
       <div class="section-label">// about me</div>
-      <h2 class="section-title">Who I Am</h2>
+      <h2 class="section-title">whoami</h2>
       <div class="about-grid">
         <div class="about-text">
           <p>
@@ -443,5 +454,25 @@
   </footer>
 
   <script src="main.js"></script>
+  <script>
+    (function() {
+      var btn    = document.getElementById('nav-hamburger');
+      var drawer = document.getElementById('nav-drawer');
+      function close() {
+        btn.classList.remove('open');
+        drawer.classList.remove('open');
+        btn.setAttribute('aria-expanded','false');
+      }
+      btn.addEventListener('click', function() {
+        var isOpen = drawer.classList.toggle('open');
+        btn.classList.toggle('open', isOpen);
+        btn.setAttribute('aria-expanded', String(isOpen));
+      });
+      // close on link click
+      drawer.querySelectorAll('a').forEach(function(a) {
+        a.addEventListener('click', close);
+      });
+    })();
+  </script>
 </body>
 </html>
